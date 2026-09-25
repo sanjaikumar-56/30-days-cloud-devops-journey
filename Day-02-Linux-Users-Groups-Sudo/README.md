@@ -685,6 +685,7 @@ Authentication verifies identity; authorization determines what that identity is
 * Git is being used to document and version-control this learning journey.
 
 ---
+---
 
 ## 📅 Progress
 
