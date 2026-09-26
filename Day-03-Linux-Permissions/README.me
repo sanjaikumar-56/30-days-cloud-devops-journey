@@ -1,1 +1,184 @@
+# Day 03 — Linux File Permissions, ACL, SUID, SGID & Sticky Bit 🐧
 
+## 📌 Overview
+
+Today I focused on Linux file and directory permissions, ownership, ACLs, and special permissions.
+
+These concepts are important for Linux administration, server security, Cloud Engineering, and DevOps.
+
+---
+
+## 📚 Topics Covered
+
+* Linux file permissions
+* Owner, Group and Others
+* Read, Write and Execute
+* Numeric permissions
+* Symbolic permissions
+* `chmod`
+* `chown`
+* `chgrp`
+* Directory permissions
+* ACL
+* `getfacl`
+* `setfacl`
+* ACL mask
+* SUID
+* SGID
+* Sticky Bit
+* Permission troubleshooting
+* Principle of least privilege
+
+---
+
+## 🔐 Basic Permissions
+
+```text
+r = 4
+w = 2
+x = 1
+```
+
+Common examples:
+
+```text
+755 → rwxr-xr-x
+644 → rw-r--r--
+600 → rw-------
+```
+
+---
+
+## 🔧 Commands Practiced
+
+```bash
+ls -l
+chmod
+chown
+chgrp
+getfacl
+setfacl
+find
+namei
+```
+
+---
+
+## 🧪 Hands-on Practice
+
+### Numeric permissions
+
+```bash
+chmod 644 test.txt
+chmod 600 test.txt
+chmod 755 test.txt
+```
+
+### Symbolic permissions
+
+```bash
+chmod u+x test.txt
+chmod g-w test.txt
+chmod o-r test.txt
+```
+
+### Ownership
+
+```bash
+sudo chown user:group test.txt
+sudo chgrp group test.txt
+```
+
+### ACL
+
+```bash
+setfacl -m u:testuser:rw test.txt
+getfacl test.txt
+setfacl -x u:testuser test.txt
+```
+
+### SGID
+
+```bash
+chmod 2775 shared
+```
+
+### Sticky Bit
+
+```bash
+chmod 1777 shared-temp
+```
+
+---
+
+## 🔥 Special Permissions
+
+| Permission | Value | Purpose                                                            |
+| ---------- | ----: | ------------------------------------------------------------------ |
+| SUID       |  4000 | Executable uses owner's effective UID                              |
+| SGID       |  2000 | Executable uses group's effective GID; directory group inheritance |
+| Sticky Bit |  1000 | Restricts deletion/rename in shared directories                    |
+
+---
+
+## 🔎 Troubleshooting
+
+For permission denied errors, I practiced checking:
+
+```bash
+id username
+ls -l file
+namei -l /path/to/file
+getfacl file
+```
+
+Instead of immediately using `chmod 777`, I focused on identifying the required permission and applying the minimum necessary access.
+
+---
+
+## 🎤 Interview Focus
+
+* What does 755 mean?
+* What does 644 mean?
+* File vs directory execute permission
+* ACL vs traditional permissions
+* SUID vs SGID vs Sticky Bit
+* How to troubleshoot Permission denied
+* Why `chmod 777` should generally be avoided
+* How to create a shared team directory
+
+---
+
+## 🔧 Git Practice
+
+```bash
+git status
+git diff
+git add Day-03-Linux-File-Permissions/README.md
+git status
+git commit -m "Day 03: Linux file permissions and ACL"
+git log --oneline -3
+git push origin main
+git status
+```
+
+---
+
+## 🧠 Key Takeaways
+
+* Linux permissions control access to files and directories.
+* `chmod` changes permissions.
+* `chown` changes ownership.
+* ACL provides granular access control.
+* SUID affects executable effective UID.
+* SGID affects executable effective GID and directory group inheritance.
+* Sticky Bit protects entries in shared directories.
+* Least privilege is preferable to unrestricted permissions.
+
+---
+
+## 📅 Progress
+
+**Day 03 / 30 ✅**
+
+Next: **Linux Processes & Services**
