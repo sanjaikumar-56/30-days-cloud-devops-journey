@@ -147,9 +147,3 @@ This journey is part of my preparation for entry-level roles such as:
 * Junior DevOps Engineer
 
 ---
-
-## 📈 Progress
-
-**Day 01 / 30**
-
-> Building practical Cloud & DevOps skills one day at a time.
