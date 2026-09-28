@@ -1,1 +1,234 @@
+# Day 05 — Linux Services & systemd
+
+## 📌 Topics Covered
+
+Today I learned how Linux services are managed using systemd and practiced service troubleshooting.
+
+### 1. Linux Services
+
+A service is a background component that provides a specific function, such as:
+
+* SSH
+* Nginx
+* Apache
+* MySQL
+* Docker
+* Cron
+
+### 2. systemd
+
+Learned that systemd is a system and service manager used by many modern Linux distributions.
+
+Checked:
+
+```bash
+ps -p 1 -f
+systemctl --version
+```
+
+### 3. systemctl
+
+Practiced:
+
+```bash
+systemctl status SERVICE
+systemctl start SERVICE
+systemctl stop SERVICE
+systemctl restart SERVICE
+systemctl reload SERVICE
+```
+
+### 4. Enable and Disable Services
+
+Learned the difference between starting a service immediately and configuring it to start automatically.
+
+```bash
+systemctl enable SERVICE
+systemctl disable SERVICE
+systemctl enable --now SERVICE
+```
+
+Also learned about:
+
+```bash
+systemctl mask SERVICE
+systemctl unmask SERVICE
+```
+
+### 5. Service Monitoring
+
+Practiced:
+
+```bash
+systemctl is-active SERVICE
+systemctl is-enabled SERVICE
+systemctl --failed
+systemctl list-units --type=service
+systemctl list-unit-files --type=service
+```
+
+### 6. Nginx Hands-on
+
+Installed and managed Nginx as a practical example.
+
+Practiced:
+
+```bash
+sudo systemctl start nginx
+sudo systemctl status nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx
+sudo systemctl enable nginx
+```
+
+Verified the web server:
+
+```bash
+curl -I http://localhost
+```
+
+### 7. Service Logs with journalctl
+
+Practiced:
+
+```bash
+sudo journalctl -u nginx
+sudo journalctl -u nginx -n 50
+sudo journalctl -u nginx -f
+sudo journalctl -u nginx -b
+```
+
+Learned how `journalctl` can be used to investigate service failures and runtime events.
+
+### 8. Nginx Configuration Validation
+
+Before reloading/restarting after configuration changes:
+
+```bash
+sudo nginx -t
+```
+
+This validates the Nginx configuration syntax.
+
+### 9. Port and Service Troubleshooting
+
+Checked listening ports:
+
+```bash
+sudo ss -lntp
+```
+
+Specifically checked HTTP port 80:
+
+```bash
+sudo ss -lntp | grep ':80'
+```
+
+### 10. systemd Unit Files
+
+Inspected service definitions:
+
+```bash
+systemctl cat nginx
+```
+
+Learned about common systemd unit locations:
+
+```text
+/etc/systemd/system/
+/usr/lib/systemd/system/
+/lib/systemd/system/
+```
+
+### 11. Service Troubleshooting Flow
+
+When a service is unavailable:
+
+```text
+Service unavailable
+        ↓
+systemctl status
+        ↓
+journalctl
+        ↓
+Validate configuration
+        ↓
+Check ports/dependencies
+        ↓
+Fix root cause
+        ↓
+Reload/restart
+        ↓
+Verify
+```
+
+### 🎯 Key Commands
+
+```bash
+systemctl status SERVICE
+systemctl start SERVICE
+systemctl stop SERVICE
+systemctl restart SERVICE
+systemctl reload SERVICE
+
+systemctl enable SERVICE
+systemctl disable SERVICE
+systemctl enable --now SERVICE
+
+systemctl is-active SERVICE
+systemctl is-enabled SERVICE
+systemctl --failed
+
+journalctl -u SERVICE
+journalctl -u SERVICE -n 50
+journalctl -u SERVICE -f
+
+systemctl cat SERVICE
+systemctl list-dependencies SERVICE
+
+ss -lntp
+nginx -t
+curl -I http://localhost
+```
+
+## 🎤 Interview Questions Practiced
+
+1. What is a Linux service?
+2. What is systemd?
+3. What is systemctl?
+4. Process vs service?
+5. Difference between start and enable?
+6. Difference between stop and disable?
+7. Restart vs reload?
+8. What is journalctl?
+9. How do you troubleshoot a failed service?
+10. How do you check failed services?
+11. How do you check whether a service starts at boot?
+12. How do you find which process is using port 80?
+13. How do you validate Nginx configuration?
+14. What is a systemd unit?
+15. Where are systemd unit files stored?
+
+## 🧪 Hands-on Practice
+
+* Managed Nginx using systemctl
+* Started and stopped services
+* Restarted and reloaded services
+* Enabled a service at boot
+* Checked service status
+* Investigated service logs
+* Validated Nginx configuration
+* Checked listening ports
+* Inspected systemd unit files
+* Practiced a complete service troubleshooting workflow
+
+## 📸 Practical Evidence
+
+Screenshots from the hands-on lab are available in the `screenshots/` directory.
+
+---
+
+**Day 5 completed ✅**
+
+#Linux #LinuxAdministration #CloudComputing #DevOps #AWS #CloudEngineer #SystemAdministration
 
