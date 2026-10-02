@@ -8,7 +8,7 @@ I also practiced troubleshooting disk-space issues and learned how Linux storage
 
 ---
 
-## 🎯 Topics Covered
+## 🎯 Topics Covered today
 
 - Linux disks and block devices
 - Partitions
