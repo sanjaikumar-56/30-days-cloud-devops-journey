@@ -78,7 +78,7 @@ During this challenge, I will learn, practice, document, and share my progress e
 ### 🐧 Linux
 
 * [Day 01 — Linux Fundamentals](./Day-01-Linux-Fundamentals/)
-* Day 02 — Linux File Management (./Day-02-Linux-Users-Groups-Sudo/)
+* [Day 02 — Linux File Management](./Day-02-Linux-Users-Groups-Sudo/)
 * Day 03 — Users, Groups & sudo
 * Day 04 — File Permissions
 * Day 05 — Process Management
