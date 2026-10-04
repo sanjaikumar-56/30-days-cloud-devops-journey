@@ -16,7 +16,7 @@ Today I focused on IPv4 addressing and subnetting, with an emphasis on understan
 - Calculate usable host ranges
 - Understand private IPv4 ranges
 - Practice subnetting
-- Inspect Linux IP and routing configuration
+- Inspect Linux IP and routing configurations
 
 ---
 
