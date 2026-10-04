@@ -40,16 +40,16 @@ During this challenge, I will learn, practice, document, and share my progress e
 
 | Day | Topic                        | Status |
 | --- | ---------------------------- | ------ |
-| 01  | Linux Fundamentals           | 🔄     |
-| 02  | Linux File Management        | ⬜      |
-| 03  | Users, Groups & sudo         | ⬜      |
-| 04  | File Permissions             | ⬜      |
-| 05  | Process Management           | ⬜      |
-| 06  | Disk Management              | ⬜      |
-| 07  | Text Processing              | ⬜      |
-| 08  | Package Management           | ⬜      |
-| 09  | SSH                          | ⬜      |
-| 10  | Linux Troubleshooting        | ⬜      |
+| 01  | Linux Fundamentals           | ✅      |
+| 02  | Linux File Management        | ✅      |
+| 03  | Users, Groups & sudo         | ✅      |
+| 04  | File Permissions             | ✅      |
+| 05  | Process Management           | ✅      |
+| 06  | Disk Management              | ✅      |
+| 07  | Text Processing              | ✅      |
+| 08  | Package Management           | ✅      |
+| 09  | SSH                          | ✅      |
+| 10  | Linux Troubleshooting        | ✅      |
 | 11  | TCP/IP                       | ⬜      |
 | 12  | IP Addressing & Subnetting   | ⬜      |
 | 13  | DNS & DHCP                   | ⬜      |
