@@ -50,11 +50,11 @@ During this challenge, I will learn, practice, document, and share my progress e
 | 08  | Package Management           | ✅      |
 | 09  | SSH                          | ✅      |
 | 10  | Linux Troubleshooting        | ✅      |
-| 11  | TCP/IP                       | ⬜      |
-| 12  | IP Addressing & Subnetting   | ⬜      |
-| 13  | DNS & DHCP                   | ⬜      |
-| 14  | Ports, TCP & UDP             | ⬜      |
-| 15  | Network Troubleshooting      | ⬜      |
+| 11  | TCP/IP                       | ✅      |
+| 12  | IP Addressing & Subnetting   | ✅      |
+| 13  | DNS & DHCP                   | ✅      |
+| 14  | Ports, TCP & UDP             | ✅      |
+| 15  | Network Troubleshooting      | ✅      |
 | 16  | AWS Fundamentals             | ⬜      |
 | 17  | IAM                          | ⬜      |
 | 18  | EC2                          | ⬜      |
